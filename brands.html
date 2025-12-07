@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог марок - CarPortal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-car"></i> CarPortal</h1>
+                <p>Лучший автомобильный портал</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#search">Поиск авто</a></li>
+                    <li><a href="sell.html">Продать авто</a></li>
+                    <li><a href="brands.html" class="active">Марки</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <section class="brands-section">
+            <div class="container">
+                <div class="page-header animate-fade-in">
+                    <h2>Каталог автомобильных марок</h2>
+                    <p>Выберите интересующую вас марку автомобиля для получения подробной информации</p>
+                </div>
+                
+                <div class="search-brands animate-fade-in delay-1">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="brandSearch" placeholder="Поиск по маркам...">
+                    </div>
+                </div>
+                
+                <div class="brands-grid">
+                    <div class="brand-card animate-fade-in-up">
+                        <div class="brand-image">
+                            <img src="https://avatars.mds.yandex.net/i?id=d269929dd361cf036ae340ddcd3a584d_l-5495733-images-thumbs&n=13" alt="Toyota">
+                        </div>
+                        <div class="brand-info">
+                            <h3>Toyota</h3>
+                            <p>Японский автопроизводитель, один из крупнейших в мире</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-car"></i> 124 модели</span>
+                                <span><i class="fas fa-calendar-alt"></i> с 1937</span>
+                            </div>
+                            <a href="#" class="btn-primary">Посмотреть модели</a>
+                        </div>
+                    </div>
+                    
+                    <div class="brand-card animate-fade-in-up delay-1">
+                        <div class="brand-image">
+                            <img src="https://resizer.mail.ru/p/5a69317a-a848-5593-804d-9dc668ab6fdb/AQABxLSzuYzs_UvcupoZJ8NNsWTupDywPQzFi2Ygshrte0ejQ_Kt64TTPLEzP7OBc3DpSfZQGNKfuCum2rcWq3Hm9o4.jpg" alt="BMW">
+                        </div>
+                        <div class="brand-info">
+                            <h3>BMW</h3>
+                            <p>Немецкий производитель автомобилей премиум-класса</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-car"></i> 98 моделей</span>
+                                <span><i class="fas fa-calendar-alt"></i> с 1916</span>
+                            </div>
+                            <a href="#" class="btn-primary">Посмотреть модели</a>
+                        </div>
+                    </div>
+                    
+                    <div class="brand-card animate-fade-in-up delay-2">
+                        <div class="brand-image">
+                            <img src="https://i.pinimg.com/originals/fc/b6/9e/fcb69ecbb6e9d1355e2352a8fb52abbb.jpg" alt="Audi">
+                        </div>
+                        <div class="brand-info">
+                            <h3>Audi</h3>
+                            <p>Немецкий автопроизводитель, часть концерна Volkswagen</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-car"></i> 76 моделей</span>
+                                <span><i class="fas fa-calendar-alt"></i> с 1909</span>
+                            </div>
+                            <a href="#" class="btn-primary">Посмотреть модели</a>
+                        </div>
+                    </div>
+                    
+                    <div class="brand-card animate-fade-in-up delay-3">
+                        <div class="brand-image">
+                            <img src="https://www.gerryland.de/wp-content/uploads/2019/01/Gerryland-Mercedes-Benz-Muenchen-Hero1-1920x960.jpg" alt="Mercedes-Benz">
+                        </div>
+                        <div class="brand-info">
+                            <h3>Mercedes-Benz</h3>
+                            <p>Немецкий бренд премиальных автомобилей и грузовиков</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-car"></i> 87 моделей</span>
+                                <span><i class="fas fa-calendar-alt"></i> с 1926</span>
+                            </div>
+                            <a href="#" class="btn-primary">Посмотреть модели</a>
+                        </div>
+                    </div>
+                    
+                    <div class="brand-card animate-fade-in-up">
+                        <div class="brand-image">
+                            <img src="https://cdnstatic.rg.ru/uploads/images/2024/11/21/istock-491488082-1_e83.jpg" alt="Volkswagen">
+                        </div>
+                        <div class="brand-info">
+                            <h3>Volkswagen</h3>
+                            <p>Немецкий автопроизводитель, один из самых массовых в мире</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-car"></i> 103 модели</span>
+                                <span><i class="fas fa-calendar-alt"></i> с 1937</span>
+                            </div>
+                            <a href="#" class="btn-primary">Посмотреть модели</a>
+                        </div>
+                    </div>
+                    
+                    <div class="brand-card animate-fade-in-up delay-1">
+                        <div class="brand-image">
+                            <img src="https://static.sobaka.ru/images/image/01/61/75/56/_normal.jpg?v=1666797860" alt="Ford">
+                        </div>
+                        <div class="brand-info">
+                            <h3>Ford</h3>
+                            <p>Американский автопроизводитель, основанный в 1903 году</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-car"></i> 65 моделей</span>
+                                <span><i class="fas fa-calendar-alt"></i> с 1903</span>
+                            </div>
+                            <a href="#" class="btn-primary">Посмотреть модели</a>
+                        </div>
+                    </div>
+                    
+                    <div class="brand-card animate-fade-in-up delay-2">
+                        <div class="brand-image">
+                            <img src="https://cdnstatic.rg.ru/uploads/images/144/86/01/1000h.jpg" alt="Hyundai">
+                        </div>
+                        <div class="brand-info">
+                            <h3>Hyundai</h3>
+                            <p>Южнокорейский автопроизводитель, основанный в 1967 году</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-car"></i> 52 модели</span>
+                                <span><i class="fas fa-calendar-alt"></i> с 1967</span>
+                            </div>
+                            <a href="#" class="btn-primary">Посмотреть модели</a>
+                        </div>
+                    </div>
+                    
+                    <div class="brand-card animate-fade-in-up delay-3">
+                        <div class="brand-image">
+                            <img src="https://avatars.dzeninfra.ru/get-zen_doc/4776500/pub_602b40a28e2e533749124929_602be3f520b7ca228dbe82ed/scale_1200" alt="Kia">
+                        </div>
+                        <div class="brand-info">
+                            <h3>Kia</h3>
+                            <p>Южнокорейская автомобилестроительная компания</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-car"></i> 48 моделей</span>
+                                <span><i class="fas fa-calendar-alt"></i> с 1944</span>
+                            </div>
+                            <a href="#" class="btn-primary">Посмотреть модели</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="models-section">
+                    <div class="section-header animate-fade-in">
+                        <h2>Популярные модели</h2>
+                        <p>Самые востребованные автомобили на рынке</p>
+                    </div>
+                    <div class="models-grid">
+                        <div class="model-card animate-fade-in-up">
+                            <div class="model-image">
+                                <img src="https://avatars.mds.yandex.net/get-autoru-vos/2057171/838514da65af16fe659e082e494e07f5/1200x900" alt="Toyota Camry">
+                                <div class="model-badge">ХИТ ПРОДАЖ</div>
+                            </div>
+                            <div class="model-info">
+                                <h3>Toyota Camry</h3>
+                                <p>Седан среднего класса</p>
+                                <div class="model-specs">
+                                    <span class="spec"><i class="fas fa-calendar-alt"></i> 2020</span>
+                                    <span class="spec"><i class="fas fa-tachometer-alt"></i> 35 000 км</span>
+                                </div>
+                                <div class="model-price">
+                                    <span class="price">2 500 000 ₽</span>
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="model-card animate-fade-in-up delay-1">
+                            <div class="model-image">
+                                <img src="https://avatars.mds.yandex.net/get-autoru-vos/6050740/8ab6ac573b1f3be07057e2930bc460ab/1200x900" alt="BMW X5">
+                            </div>
+                            <div class="model-info">
+                                <h3>BMW X5</h3>
+                                <p>Внедорожник премиум-класса</p>
+                                <div class="model-specs">
+                                    <span class="spec"><i class="fas fa-calendar-alt"></i> 2019</span>
+                                    <span class="spec"><i class="fas fa-tachometer-alt"></i> 42 000 км</span>
+                                </div>
+                                <div class="model-price">
+                                    <span class="price">4 200 000 ₽</span>
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="model-card animate-fade-in-up delay-2">
+                            <div class="model-image">
+                                <img src="https://avatars.mds.yandex.net/get-autoru-vos/11871473/6df7ae13a8ab83cb9e979b128e24fcdf/1200x900" alt="Audi A6">
+                                <div class="model-badge premium">ПРЕМИУМ</div>
+                            </div>
+                            <div class="model-info">
+                                <h3>Audi A6</h3>
+                                <p>Седан бизнес-класса</p>
+                                <div class="model-specs">
+                                    <span class="spec"><i class="fas fa-calendar-alt"></i> 2021</span>
+                                    <span class="spec"><i class="fas fa-tachometer-alt"></i> 28 000 км</span>
+                                </div>
+                                <div class="model-price">
+                                    <span class="price">3 800 000 ₽</span>
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="model-card animate-fade-in-up delay-3">
+                            <div class="model-image">
+                                <img src="https://avatars.mds.yandex.net/get-autoru-vos/4879892/36cc8317855d70ac53960556415fb9a0/1200x900" alt="Mercedes C-Class">
+                            </div>
+                            <div class="model-info">
+                                <h3>Mercedes C-Class</h3>
+                                <p>Седан компактного бизнес-класса</p>
+                                <div class="model-specs">
+                                    <span class="spec"><i class="fas fa-calendar-alt"></i> 2020</span>
+                                    <span class="spec"><i class="fas fa-tachometer-alt"></i> 31 000 км</span>
+                                </div>
+                                <div class="model-price">
+                                    <span class="price">3 200 000 ₽</span>
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>CarPortal</h3>
+                    <p>Лучший автомобильный портал для покупки и продажи автомобилей.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="index.html#search">Поиск авто</a></li>
+                        <li><a href="sell.html">Продать авто</a></li>
+                        <li><a href="brands.html">Марки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Помощь</h4>
+                    <ul>
+                        <li><a href="#">Как купить авто</a></li>
+                        <li><a href="#">Как продать авто</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</li>
+                        <li><i class="fas fa-envelope"></i> info@carportal.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Примерная, 1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CarPortal. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Анимация при наведении на карточки брендов
+        document.querySelectorAll('.brand-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // Поиск по брендам
+        document.getElementById('brandSearch').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const brandCards = document.querySelectorAll('.brand-card');
+            
+            brandCards.forEach(card => {
+                const brandName = card.querySelector('h3').textContent.toLowerCase();
+                if (brandName.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+        
+        // Мобильное меню
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        });
+        
+        // Функциональность кнопок избранного
+        const favoriteButtons = document.querySelectorAll('.btn-favorite');
+        favoriteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('far')) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    this.style.color = '#e74c3c';
+                    showNotification('Добавлено в избранное', 'success');
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    this.style.color = '';
+                    showNotification('Удалено из избранного', 'info');
+                }
+            });
+        });
+        
+        // Система уведомлений
+        function showNotification(message, type = 'info') {
+            // Создание контейнера для уведомлений, если его нет
+            let notificationContainer = document.getElementById('notification-container');
+            if (!notificationContainer) {
+                notificationContainer = document.createElement('div');
+                notificationContainer.id = 'notification-container';
+                notificationContainer.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 9999;
+                    width: 300px;
+                `;
+                document.body.appendChild(notificationContainer);
+            }
+            
+            // Создание уведомления
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                background: ${type === 'success' ? '#2ecc71' : type === 'error' ? '#e74c3c' : '#3498db'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                transform: translateX(100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            `;
+            
+            notification.textContent = message;
+            
+            // Добавление уведомления в контейнер
+            notificationContainer.appendChild(notification);
+            
+            // Анимация появления
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+                notification.style.opacity = '1';
+            }, 10);
+            
+            // Автоматическое удаление через 5 секунд
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                notification.style.opacity = '0';
+                
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 5000);
+            
+            // Удаление по клику
+            notification.addEventListener('click', () => {
+                notification.style.transform = 'translateX(100%)';
+                notification.style.opacity = '0';
+                
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            });
+        }
+    </script>
+</body>
+</html>

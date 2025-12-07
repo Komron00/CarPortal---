@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarPortal - Лучший автомобильный портал</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-car"></i> CarPortal</h1>
+                <p>Лучший автомобильный портал</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#search">Поиск авто</a></li>
+                    <li><a href="sell.html">Продать авто</a></li>
+                    <li><a href="brands.html">Марки</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="animate-slide-in">Найдите идеальный автомобиль для себя</h2>
+                    <p class="animate-slide-in delay-1">Более 100 000 объявлений от частных лиц и автосалонов</p>
+                    <a href="#search" class="btn-primary animate-fade-in delay-2">Начать поиск</a>
+                </div>
+                <div class="hero-image animate-zoom-in">
+                    <img src="https://avatars.mds.yandex.net/get-autoru-vos/11871473/6df7ae13a8ab83cb9e979b128e24fcdf/1200x900" alt="Роскошный автомобиль">
+                </div>
+            </div>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title animate-fade-in">Наши преимущества</h2>
+                <div class="feature-grid">
+                    <div class="feature-item animate-slide-up delay-1">
+                        <div class="feature-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Широкий выбор</h3>
+                        <p>Более 100 000 автомобилей от частных лиц и автосалонов</p>
+                    </div>
+                    <div class="feature-item animate-slide-up delay-2">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>Проверка истории</h3>
+                        <p>Интеграция с сервисами проверки пробега и ДТП</p>
+                    </div>
+                    <div class="feature-item animate-slide-up delay-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Безопасная сделка</h3>
+                        <p>Гарантия безопасности при покупке и продаже</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="search" class="search-section">
+            <div class="container">
+                <h2 class="section-title animate-fade-in">Поиск автомобилей</h2>
+                <form class="search-form animate-fade-in">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="brand">Марка:</label>
+                            <select id="brand">
+                                <option value="">Любая</option>
+                                <option value="toyota">Toyota</option>
+                                <option value="bmw">BMW</option>
+                                <option value="audi">Audi</option>
+                                <option value="mercedes">Mercedes-Benz</option>
+                                <option value="volkswagen">Volkswagen</option>
+                                <option value="ford">Ford</option>
+                                <option value="hyundai">Hyundai</option>
+                                <option value="kia">Kia</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="model">Модель:</label>
+                            <select id="model">
+                                <option value="">Любая</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="price-from">Цена от:</label>
+                            <input type="number" id="price-from" placeholder="От">
+                        </div>
+                        <div class="form-group">
+                            <label for="price-to">Цена до:</label>
+                            <input type="number" id="price-to" placeholder="До">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="year-from">Год от:</label>
+                            <input type="number" id="year-from" placeholder="От" min="1990" max="2023">
+                        </div>
+                        <div class="form-group">
+                            <label for="year-to">Год до:</label>
+                            <input type="number" id="year-to" placeholder="До" min="1990" max="2023">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary btn-search">
+                        <i class="fas fa-search"></i> Найти
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="latest-ads" class="latest-ads">
+            <div class="container">
+                <h2 class="section-title animate-fade-in">Последние объявления</h2>
+                <div class="ads-grid">
+                    <div class="ad-card animate-fade-in-up delay-1">
+                        <div class="ad-image">
+                            <img src="https://avatars.mds.yandex.net/get-autoru-vos/2057171/838514da65af16fe659e082e494e07f5/1200x900" alt="Toyota Camry">
+                            <div class="ad-badge">НОВИНКА</div>
+                        </div>
+                        <div class="ad-info">
+                            <h3>Toyota Camry 2020</h3>
+                            <p class="price">2 500 000 ₽</p>
+                            <p class="details">Пробег: 35 000 км | Год: 2020</p>
+                            <div class="ad-actions">
+                                <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                <button class="btn-compare"><i class="fas fa-balance-scale"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ad-card animate-fade-in-up delay-2">
+                        <div class="ad-image">
+                            <img src="https://avatars.mds.yandex.net/get-autoru-vos/6050740/8ab6ac573b1f3be07057e2930bc460ab/1200x900" alt="BMW X5">
+                        </div>
+                        <div class="ad-info">
+                            <h3>BMW X5 2019</h3>
+                            <p class="price">4 200 000 ₽</p>
+                            <p class="details">Пробег: 42 000 км | Год: 2019</p>
+                            <div class="ad-actions">
+                                <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                <button class="btn-compare"><i class="fas fa-balance-scale"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ad-card animate-fade-in-up delay-3">
+                        <div class="ad-image">
+                            <img src="https://avatars.mds.yandex.net/get-autoru-vos/11871473/6df7ae13a8ab83cb9e979b128e24fcdf/1200x900" alt="Audi A6">
+                            <div class="ad-badge premium">ПРЕМИУМ</div>
+                        </div>
+                        <div class="ad-info">
+                            <h3>Audi A6 2021</h3>
+                            <p class="price">3 800 000 ₽</p>
+                            <p class="details">Пробег: 28 000 км | Год: 2021</p>
+                            <div class="ad-actions">
+                                <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                <button class="btn-compare"><i class="fas fa-balance-scale"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ad-card animate-fade-in-up delay-4">
+                        <div class="ad-image">
+                            <img src="https://avatars.mds.yandex.net/get-autoru-vos/4879892/36cc8317855d70ac53960556415fb9a0/1200x900" alt="Mercedes-Benz C-Class">
+                        </div>
+                        <div class="ad-info">
+                            <h3>Mercedes C-Class 2020</h3>
+                            <p class="price">3 200 000 ₽</p>
+                            <p class="details">Пробег: 31 000 км | Год: 2020</p>
+                            <div class="ad-actions">
+                                <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                <button class="btn-compare"><i class="fas fa-balance-scale"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="btn-secondary">Показать еще</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item animate-counter">
+                        <div class="stat-number" data-count="100000">0</div>
+                        <div class="stat-label">Автомобилей</div>
+                    </div>
+                    <div class="stat-item animate-counter">
+                        <div class="stat-number" data-count="50000">0</div>
+                        <div class="stat-label">Продавцов</div>
+                    </div>
+                    <div class="stat-item animate-counter">
+                        <div class="stat-number" data-count="98">0</div>
+                        <div class="stat-label">% довольных клиентов</div>
+                    </div>
+                    <div class="stat-item animate-counter">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">Часа поддержки</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title animate-fade-in">Отзывы наших клиентов</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial-card animate-fade-in">
+                        <div class="testimonial-content">
+                            <p>"Благодаря CarPortal нашел отличный автомобиль за разумные деньги. Процесс покупки был простым и безопасным."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://avatars.mds.yandex.net/get-autoru-vos/2057171/838514da65af16fe659e082e494e07f5/1200x900" alt="Алексей Петров" style="width: 70px; height: 70px; object-fit: cover;">
+                            <div>
+                                <h4>Алексей Петров</h4>
+                                <p>Покупатель Toyota Camry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>CarPortal</h3>
+                    <p>Лучший автомобильный портал для покупки и продажи автомобилей.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#search">Поиск авто</a></li>
+                        <li><a href="sell.html">Продать авто</a></li>
+                        <li><a href="brands.html">Марки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Помощь</h4>
+                    <ul>
+                        <li><a href="#">Как купить авто</a></li>
+                        <li><a href="#">Как продать авто</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</li>
+                        <li><i class="fas fa-envelope"></i> info@carportal.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Примерная, 1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CarPortal. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

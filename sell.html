@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продать авто - CarPortal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-car"></i> CarPortal</h1>
+                <p>Лучший автомобильный портал</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#search">Поиск авто</a></li>
+                    <li><a href="sell.html" class="active">Продать авто</a></li>
+                    <li><a href="brands.html">Марки</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <section class="sell-section">
+            <div class="container">
+                <div class="page-header animate-fade-in">
+                    <h2>Разместить объявление о продаже автомобиля</h2>
+                    <p>Заполните форму ниже, чтобы разместить объявление о продаже вашего автомобиля</p>
+                </div>
+                
+                <div class="sell-steps animate-fade-in delay-1">
+                    <div class="step-indicator">
+                        <div class="step active">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Информация об авто</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Фотографии</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Контакты</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sell-form-container animate-fade-in delay-2">
+                    <form id="sellForm" enctype="multipart/form-data">
+                        <div class="form-section">
+                            <h3><i class="fas fa-car"></i> Основная информация</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="car-brand">Марка автомобиля *</label>
+                                    <select id="car-brand" required>
+                                        <option value="">Выберите марку</option>
+                                        <option value="toyota">Toyota</option>
+                                        <option value="bmw">BMW</option>
+                                        <option value="audi">Audi</option>
+                                        <option value="mercedes">Mercedes-Benz</option>
+                                        <option value="volkswagen">Volkswagen</option>
+                                        <option value="ford">Ford</option>
+                                        <option value="hyundai">Hyundai</option>
+                                        <option value="kia">Kia</option>
+                                        <option value="nissan">Nissan</option>
+                                        <option value="mazda">Mazda</option>
+                                        <option value="chevrolet">Chevrolet</option>
+                                        <option value="renault">Renault</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="car-model">Модель автомобиля *</label>
+                                    <input type="text" id="car-model" required placeholder="Введите модель">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="car-year">Год выпуска *</label>
+                                    <input type="number" id="car-year" required min="1900" max="2023" placeholder="Введите год">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="car-mileage">Пробег (км) *</label>
+                                    <input type="number" id="car-mileage" required placeholder="Введите пробег">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="car-price">Цена (₽) *</label>
+                                    <input type="number" id="car-price" required placeholder="Введите цену">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="car-region">Регион *</label>
+                                    <select id="car-region" required>
+                                        <option value="">Выберите регион</option>
+                                        <option value="moscow">Москва</option>
+                                        <option value="spb">Санкт-Петербург</option>
+                                        <option value="novosibirsk">Новосибирск</option>
+                                        <option value="ekb">Екатеринбург</option>
+                                        <option value="kazan">Казань</option>
+                                        <option value="nn">Нижний Новгород</option>
+                                        <option value="chelyabinsk">Челябинск</option>
+                                        <option value="samara">Самара</option>
+                                        <option value="rostov">Ростов-на-Дону</option>
+                                        <option value="omsk">Омск</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="car-engine">Объем двигателя (л)</label>
+                                    <input type="number" id="car-engine" step="0.1" placeholder="Например: 2.0">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="car-transmission">Коробка передач</label>
+                                    <select id="car-transmission">
+                                        <option value="">Выберите тип</option>
+                                        <option value="manual">Механическая</option>
+                                        <option value="automatic">Автоматическая</option>
+                                        <option value="robot">Робот</option>
+                                        <option value="variator">Вариатор</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="car-description">Описание автомобиля *</label>
+                                <textarea id="car-description" rows="5" required placeholder="Опишите автомобиль, его особенности, состояние и т.д."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3><i class="fas fa-images"></i> Фотографии автомобиля</h3>
+                            <div class="form-group">
+                                <label for="car-photos">Фотографии автомобиля *</label>
+                                <div class="drop-area" id="dropArea">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Перетащите фотографии сюда или <span class="browse-link">выберите файлы</span></p>
+                                    <input type="file" id="car-photos" multiple accept="image/*" style="display: none;">
+                                </div>
+                                <small>Вы можете загрузить до 10 фотографий (JPG, PNG, максимальный размер 5MB)</small>
+                                <div class="preview-container" id="previewContainer"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Контактная информация</h3>
+                            <div class="form-group">
+                                <label for="seller-name">Ваше имя *</label>
+                                <input type="text" id="seller-name" required placeholder="Введите ваше имя">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="seller-phone">Телефон *</label>
+                                    <input type="tel" id="seller-phone" required placeholder="+7 (___) ___-__-__">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="seller-email">Email</label>
+                                    <input type="email" id="seller-email" placeholder="your@email.com">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="agreement" required>
+                                Я согласен с <a href="#">правилами размещения объявлений</a> и <a href="#">политикой конфиденциальности</a>
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="reset" class="btn-secondary">Очистить форму</button>
+                            <button type="submit" class="btn-primary">Разместить объявление</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>CarPortal</h3>
+                    <p>Лучший автомобильный портал для покупки и продажи автомобилей.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="index.html#search">Поиск авто</a></li>
+                        <li><a href="sell.html">Продать авто</a></li>
+                        <li><a href="brands.html">Марки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Помощь</h4>
+                    <ul>
+                        <li><a href="#">Как купить авто</a></li>
+                        <li><a href="#">Как продать авто</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</li>
+                        <li><i class="fas fa-envelope"></i> info@carportal.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Примерная, 1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CarPortal. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Обработчик формы продажи автомобиля
+        document.getElementById('sellForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Получаем значения из формы
+            const brand = document.getElementById('car-brand').value;
+            const model = document.getElementById('car-model').value;
+            const year = document.getElementById('car-year').value;
+            const mileage = document.getElementById('car-mileage').value;
+            const price = document.getElementById('car-price').value;
+            const region = document.getElementById('car-region').value;
+            const description = document.getElementById('car-description').value;
+            const sellerName = document.getElementById('seller-name').value;
+            const sellerPhone = document.getElementById('seller-phone').value;
+            
+            // В реальном приложении здесь был бы запрос к серверу
+            showNotification(`Объявление успешно размещено!
+
+${brand} ${model} ${year} года
+Пробег: ${mileage} км
+Цена: ${price} ₽
+Регион: ${region}
+
+Продавец: ${sellerName}
+Телефон: ${sellerPhone}`, 'success');
+        });
+        
+        // Форматирование номера телефона
+        document.getElementById('seller-phone').addEventListener('input', function(e) {
+            let phone = e.target.value.replace(/\D/g, '');
+            if (phone.length > 11) phone = phone.substring(0, 11);
+            
+            if (phone.startsWith('7') || phone.startsWith('8')) {
+                phone = phone.substring(1);
+            }
+            
+            let formattedPhone = '+7 ';
+            if (phone.length > 0) formattedPhone += '(' + phone.substring(0, 3);
+            if (phone.length > 3) formattedPhone += ') ' + phone.substring(3, 6);
+            if (phone.length > 6) formattedPhone += '-' + phone.substring(6, 8);
+            if (phone.length > 8) formattedPhone += '-' + phone.substring(8, 10);
+            
+            e.target.value = formattedPhone;
+        });
+        
+        // Drag and drop для фотографий
+        const dropArea = document.getElementById('dropArea');
+        const fileInput = document.getElementById('car-photos');
+        const previewContainer = document.getElementById('previewContainer');
+        const browseLink = document.querySelector('.browse-link');
+        
+        // Обработчики событий drag and drop
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+        
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+        
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+        
+        function highlight() {
+            dropArea.classList.add('highlight');
+        }
+        
+        function unhighlight() {
+            dropArea.classList.remove('highlight');
+        }
+        
+        // Обработка события drop
+        dropArea.addEventListener('drop', handleDrop, false);
+        
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+        
+        // Обработка клика по области загрузки
+        dropArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        browseLink.addEventListener('click', (e) => {
+            e.stopPropagation();
+            fileInput.click();
+        });
+        
+        fileInput.addEventListener('change', () => {
+            handleFiles(fileInput.files);
+        });
+        
+        function handleFiles(files) {
+            [...files].forEach(uploadFile);
+        }
+        
+        function uploadFile(file) {
+            // Проверка типа файла
+            if (!file.type.match('image.*')) {
+                showNotification('Пожалуйста, выберите только изображения', 'error');
+                return;
+            }
+            
+            // Проверка размера файла (максимум 5MB)
+            if (file.size > 5 * 1024 * 1024) {
+                showNotification('Размер файла не должен превышать 5MB', 'error');
+                return;
+            }
+            
+            // Создание превью
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onloadend = function() {
+                const preview = document.createElement('div');
+                preview.className = 'preview-item';
+                preview.innerHTML = `
+                    <img src="${reader.result}" alt="Preview">
+                    <button type="button" class="remove-preview" onclick="this.parentElement.remove()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                `;
+                previewContainer.appendChild(preview);
+            };
+        }
+        
+        // Система уведомлений (скопирована из основного скрипта)
+        function showNotification(message, type = 'info') {
+            // Создание контейнера для уведомлений, если его нет
+            let notificationContainer = document.getElementById('notification-container');
+            if (!notificationContainer) {
+                notificationContainer = document.createElement('div');
+                notificationContainer.id = 'notification-container';
+                notificationContainer.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 9999;
+                    width: 300px;
+                `;
+                document.body.appendChild(notificationContainer);
+            }
+            
+            // Создание уведомления
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                background: ${type === 'success' ? '#2ecc71' : type === 'error' ? '#e74c3c' : '#3498db'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                transform: translateX(100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            `;
+            
+            notification.textContent = message;
+            
+            // Добавление уведомления в контейнер
+            notificationContainer.appendChild(notification);
+            
+            // Анимация появления
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+                notification.style.opacity = '1';
+            }, 10);
+            
+            // Автоматическое удаление через 5 секунд
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                notification.style.opacity = '0';
+                
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 5000);
+            
+            // Удаление по клику
+            notification.addEventListener('click', () => {
+                notification.style.transform = 'translateX(100%)';
+                notification.style.opacity = '0';
+                
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            });
+        }
+        
+        // Мобильное меню
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
